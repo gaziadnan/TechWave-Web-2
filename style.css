@@ -36,6 +36,20 @@ html,body{
   padding:5px ;
 }
 
+.main-img {
+  width: 100%;
+  display: block;
+}
+
+.play-btn {
+  position: absolute;     /* 👈 image এর উপর বসবে */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  cursor: pointer;
+}
+
 .navbar {
   justify-content: space-around;
   max-width: 1600px;
@@ -119,7 +133,135 @@ html,body{
   opacity: 0.7;
 }
 
-/* 📱 Small screen */
+
+/* Feature section */
+
+
+.feature{
+    text-align: center;
+    background-color: #1A0B2E;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 120px 200px;
+
+}
+
+.feature-title{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.cards{
+    gap: 30px;
+}
+
+.feature-card{
+    width: 380px;
+    overflow: hidden;
+
+
+}
+
+.image-wrapper {
+  position: relative;     /* 👈 important */
+}
+
+.feature-body{
+    text-align: start;
+    padding: 24px;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+.card-para{
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff99;
+    padding:  12px 0px;
+}
+
+.feature-time{
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+    color: #00FF88;
+}
+.time-paragraph{
+    line-height: 24px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.clock{
+    width: 16px;
+    height: 16px;
+}
+/* Meet the host */
+
+.alex-kumar{
+    padding: 40px;
+
+    background:linear-gradient(#533C72,black
+    ) ;
+    border-radius: 35px;
+    text-align: left;
+    gap: 24px;
+
+
+}
+.host-title{
+ margin-top: 80px;
+ margin-bottom: 40px;
+ font-size: 3rem;
+ font-weight: 700;
+}
+.alex-title{
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.alex-para{
+    color:#FFFFFF99 ;
+    line-height: 24px;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.alex-icons img{
+    width: 18px;
+  height: 18px;
+  
+    
+}
+.iconss{
+ 
+  border: 1.5px solid #533C72;
+  border-radius: 50%;          /* 👈 গোল */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+  
+}
+.alex-icons{
+
+    gap:8px ;
+    
+    
+}
+
+
+
+
+/* Small screen */
 @media screen and (max-width: 576px) {
   .icon {
     width: 45%;   /* 👈 2 ta + 2 ta */
