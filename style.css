@@ -28,12 +28,12 @@ body {
 }
 .btn {
   background: linear-gradient(50deg, #f7e93f 0%, #fb09b4 51%, #9100f8 100%);
-  border-radius: 1000px;
+  border-radius: 120px;
   color: #ffffff;
   align-items: center;
   gap: 5px;
   border: none;
-  padding: 5px;
+  padding: 12px 22px;
 }
 
 .main-img {
@@ -71,7 +71,10 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
-
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
 .brand {
 }
 .wave {
@@ -134,14 +137,141 @@ body {
   opacity: 0.7;
 }
 
-
 /* wave Section */
+.hero {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  position: relative;
 
+  /* 🌊 background wave */
+  background-image: url("./assets/hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center; /* 🔥 middle */
+  background-size: cover; /* 🔥 full width */
+}
 
+/* Mic wrapper */
+.mic-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 30px;
+}
+
+/* Mic background */
+.mic-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Mic icon */
+.mic-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  transform: translate(-50%, -50%);
+}
+
+/* NEW badge */
+.new-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #2cff9a;
+  color: #000;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.new-badge {
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Text */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1rem;
+  opacity: 0.8;
+  font-weight: 400;
+  color: #ffffff99;
+  padding-bottom: 24px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #ff4ecd, #ff9f1c);
+  color: #fff;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #2cff9a;
+  border: 1px solid #2cff9a;
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #2cff9a;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(44, 255, 154, 0.4);
+}
+/* Primary button hover */
+.btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 78, 205, 0.4);
+  opacity: 0.95;
+}
+
+/* Secondary button hover */
+.btn.secondary:hover {
+  background: #2cff9a;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(44, 255, 154, 0.4);
+}
 
 /* about section */
-
 
 .about-podcast {
   padding: 50px 200px;
@@ -150,26 +280,21 @@ body {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-
 }
-.about-title{
+.about-title {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 16px;
-
-
 }
 
-.about-para1{
- color: #ffffff99;
+.about-para1 {
+  color: #ffffff99;
   line-height: 24px;
   font-weight: 400;
   font-size: 1rem;
   margin-bottom: 16px;
-  
 }
-.about-para2{
-  
+.about-para2 {
   margin-bottom: 40px;
 
   color: #ffffff99;
@@ -179,9 +304,8 @@ body {
 }
 
 .about-stats {
-
   border-top: 1px solid #ffffff15;
- 
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
@@ -189,17 +313,17 @@ body {
 }
 
 .start-head {
-   margin-top: 40px;
-  color: #00FF88;
+  margin-top: 40px;
+  color: #00ff88;
   font-size: 3rem;
   font-weight: 900;
 }
-
-
-
-
-
-
+.start-p {
+  color: #ffffff99;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 1rem;
+}
 
 /* <!-- why section --> */
 
@@ -401,10 +525,35 @@ body {
 
 /* Small screen */
 @media screen and (max-width: 576px) {
+  /* nav section */
+
+  .nav-items {
+    display: none;
+
+  }
+
+  .btn{
+    display: none;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+  /* wave section */
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+  /* footer section */
   .icon {
     width: 45%;
     justify-content: center;
   }
+  /* why section grid*/
 
   .container {
     grid-template-areas:
@@ -413,5 +562,26 @@ body {
       "global"
       "exclusive"
       "rich";
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* features section  */
+
+  .cards {
+    flex-direction: column;
+  }
+
+  /* meet the host */
+
+  .alex-kumar{
+    flex-direction: column;
+
+  }
+
+  .alex-des{
+    text-align: center;
   }
 }
