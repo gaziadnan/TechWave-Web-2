@@ -59,6 +59,7 @@ body {
   margin: 0 auto;
 
   height: 92px;
+  border-bottom: 2px solid #9100f820;
 }
 .nav-items {
   gap: 70px;
@@ -133,21 +134,84 @@ body {
   opacity: 0.7;
 }
 
+
+/* wave Section */
+
+
+
+
+/* about section */
+
+
+.about-podcast {
+  padding: 50px 200px;
+  text-align: center;
+  background: #1b0b2e;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+
+}
+.about-title{
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+
+
+}
+
+.about-para1{
+ color: #ffffff99;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  
+}
+.about-para2{
+  
+  margin-bottom: 40px;
+
+  color: #ffffff99;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.about-stats {
+
+  border-top: 1px solid #ffffff15;
+ 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.start-head {
+   margin-top: 40px;
+  color: #00FF88;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+
+
+
+
+
+
 /* <!-- why section --> */
 
-
 .why {
-
-   background-color: #230E3D;
+  background-color: #230e3d;
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
   padding: 120px 200px;
-  
-
 }
 
-.why-title{
+.why-title {
   text-align: center;
   font-size: 3rem;
   font-weight: 700;
@@ -159,8 +223,7 @@ body {
   gap: 20px;
   max-width: 1200px;
   width: 100%;
-  
- 
+
   grid-template-areas:
     "premium      mobile   mobile   mobile     mobile "
     "premium      global   global      global     global"
@@ -169,48 +232,43 @@ body {
 
 /* Common style */
 
- .container h2{
-  color:#ffffff;
-  margin-bottom:  16px;
-  margin-top:  16px;
+.container h2 {
+  color: #ffffff;
+  margin-bottom: 16px;
+  margin-top: 16px;
   font-size: 1.5rem;
   font-weight: 700;
-
 }
-.container p{
+.container p {
   color: #ffffff99;
   line-height: 24px;
   font-weight: 400;
   font-size: 1rem;
-
 }
 
-
-
-.exclusive, .premium, .mobile, .global , .rich{
+.exclusive,
+.premium,
+.mobile,
+.global,
+.rich {
   border-radius: 40px;
   background: linear-gradient(1deg, #35116540);
-  
+
   text-align: start;
-  
+
   width: 100%;
   padding: 40px;
-} 
+}
 
-.rich{
-  
+.rich {
   border-radius: 40px;
   background: linear-gradient(1deg, #35116540);
-  
+
   text-align: start;
   max-width: 380px;
   width: 100%;
   padding: 40px;
 }
-
-
-  
-
 
 .premium {
   grid-area: premium;
@@ -231,12 +289,6 @@ body {
 .rich {
   grid-area: rich;
 }
- 
-
-
-
-
-
 
 /* Feature section */
 
@@ -264,7 +316,7 @@ body {
 }
 
 .image-wrapper {
-  position: relative; 
+  position: relative;
 }
 
 .feature-body {
@@ -299,9 +351,6 @@ body {
   width: 16px;
   height: 16px;
 }
-
-
-
 
 /* Meet the host */
 
@@ -353,13 +402,11 @@ body {
 /* Small screen */
 @media screen and (max-width: 576px) {
   .icon {
-    width: 45%; 
+    width: 45%;
     justify-content: center;
   }
 
-
-
-   .container{
+  .container {
     grid-template-areas:
       "premium"
       "mobile"
